@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>360 Bright Media</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/animate.css"/>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		.main-body {
+			margin-top: 100vh;
+		}
+
+		.body-title {
+			color: rgb(255, 153, 82);
+			font-size: 58px;
+			line-height: 64px;
+			font-weight: 700;
+			padding-top: 100px;
+		}
+
+		.title-description {
+			font-size: 18px;
+			line-height: 26px;
+			padding: 16px 150px 48px 150px;
+			color: rgb(113, 113, 113);
+		}
+
+		.feature-section {
+			height: 550px;
+		}
+
+		.feature-section-text {
+			position: relative;
+			height: 550px;
+		}
+
+		.feature-section-text-container {
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+			left: 60px;
+		}
+
+		.feature-section-text-title {
+			font-size: 28px;
+			line-height: 36px;
+			color: rgb(0, 213, 115);
+			font-weight: 700;
+			text-align: left;
+		}
+
+		.feature-section-text-description {
+			font-weight: 300;
+			color: rgb(113, 113, 113);
+			margin-top: 0px;
+			margin-bottom: 24px;
+			font-size: 16px;
+			line-height: 24px;
+			text-align: left;
+		}
+
+		.feature-section-image-container {
+			position: relative;
+			height: 550px;
+		}
+
+		.feature-section-image {
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+		}
+
+		.form-section {
+			background-image: url(assets/images/form-bg.jpg);
+			height: 900px;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="wrapper">
+		<ul id="scene" class="scene unselectable"
+			data-friction-x="0.1"
+			data-friction-y="0.1"
+			data-scalar-x="25"
+			data-scalar-y="15">
+			<li class="layer" data-depth="0.00"></li>
+			<li class="layer" data-depth="0.10"><div class="background"></div></li>
+			<li class="layer" data-depth="0.10"><div class="light orange b phase-4"></div></li>
+			<li class="layer" data-depth="0.10"><div class="light purple c phase-5"></div></li>
+			<li class="layer" data-depth="0.10"><div class="light orange d phase-3"></div></li>
+			<li class="layer" data-depth="0.15">
+				<ul class="rope depth-10">
+					<li><img src="assets/images/rope.png" alt="Rope"></li>
+					<li class="hanger position-2">
+						<div class="board cloud-2 swing-1"></div>
+					</li>
+					<li class="hanger position-4">
+						<div class="board cloud-1 swing-3"></div>
+					</li>
+					<li class="hanger position-8">
+						<div class="board birds swing-5"></div>
+					</li>
+				</ul>
+			</li>
+			<li class="layer" data-depth="0.20"><h1 class="title" style="color: white"><em>360</em>Bright Media</h1></li>
+			<li class="layer" data-depth="0.30">
+				<ul class="rope depth-30">
+					<li><img src="assets/images/rope.png" alt="Rope"></li>
+					<li class="hanger position-1">
+						<div class="board cloud-1 swing-3"></div>
+					</li>
+					<li class="hanger position-5">
+						<div class="board cloud-4 swing-1"></div>
+					</li>
+				</ul>
+			</li>
+			<li class="layer" data-depth="0.30"><div class="wave paint depth-30"></div></li>
+			<li class="layer" data-depth="0.40"><div class="wave plain depth-40"></div></li>
+			<li class="layer" data-depth="0.50"><div class="wave paint depth-50"></div></li>
+			<li class="layer" data-depth="0.60"><div class="lighthouse depth-60"></div></li>
+			<li class="layer" data-depth="0.60">
+				<ul class="rope depth-60">
+					<li><img src="assets/images/rope.png" alt="Rope"></li>
+					<li class="hanger position-3">
+						<div class="board birds swing-5"></div>
+					</li>
+					<li class="hanger position-6">
+						<div class="board cloud-2 swing-2"></div>
+					</li>
+					<li class="hanger position-8">
+						<div class="board cloud-3 swing-4"></div>
+					</li>
+				</ul>
+			</li>
+			<li class="layer" data-depth="0.60"><div class="wave plain depth-60"></div></li>
+			<li class="layer" data-depth="0.80"><div class="wave plain depth-80"></div></li>
+			<li class="layer" data-depth="1.00"><div class="wave paint depth-100"></div></li>
+		</ul>
+		<!-- <section id="about" class="wrapper about hide accelerate">
+			<div class="cell accelerate">
+				<div class="cables center accelerate">
+					<div class="panel accelerate">
+						<header>
+							<h1><em>360</em>Bright Media</h1>
+						</header>
+						<p>WOW, that's deep man! <strong>parallax.js</strong> reacts to the orientation of your smart device, offsetting layers depending on their depth within a scene... Oh, you don't have a smart device? No worries, if no gyroscope or motion detection hardware is available, <strong>parallax.js</strong> uses the position of your cursor instead. Radical.</p>
+						<p>This project is a collaboration between<br><a href="http://matthew.wagerfield.com/" target="_blank">Matthew Wagerfield</a> &amp; <a href="http://cargocollective.com/whydontwetry" target="_blank">Claudio Guglieri</a>.</p>
+						<div class="social">
+							<a href="https://twitter.com/wagerfield" class="twitter-follow-button" data-show-count="false">Follow <span class="handle">@wagerfield</span></a>
+							<a href="https://twitter.com/claudioguglieri" class="twitter-follow-button" data-show-count="false">Follow <span class="handle">@claudioguglieri</span></a>
+						</div>
+						<ul class="links">
+							<li><a class="download" href="https://github.com/wagerfield/parallax/archive/master.zip">Download</a></li>
+							<li><a class="github" target="_blank" href="https://github.com/wagerfield/parallax">GitHub</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- <button id="toggle" class="toggle i">
+			<div class="cross">
+				<div class="x"></div>
+				<div class="y"></div>
+			</div>
+		</button> -->
+		<!-- <div id="prompt" class="wrapper prompt hide accelerate">
+			<div class="cell accelerate">
+				<div class="panel center unselectable accelerate">
+					<button id="dismiss" class="dismiss">
+						<div class="cross">
+							<div class="x"></div>
+							<div class="y"></div>
+						</div>
+					</button>
+					<div class="tilt-scene">
+						<img class="tilt" src="assets/images/tilt.png">
+					</div>
+					<h2>Tilting is fun!</h2>
+					<p>For the best experience, check out this site on a mobile or tablet equipped with a gyroscope</p>
+					<p>(iPads are the coolest)</p>
+				</div>
+			</div>
+		</div> -->
+		<!-- <footer>
+			<div class="fb-like" data-href="http://wagerfield.github.io/parallax/" data-width="400" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://wagerfield.github.io/parallax/" data-text="Tilting is fun! Check out #parallax.js by @wagerfield & @claudioguglieri »">Tweet</a>
+		</footer> -->
+	</div>
+
+	<div class="container main-body">
+		<div class="row">
+			<div class="col-sm-12 bg-white">
+					<h1 class="body-title">Built for Creators</h1>
+			    <div class="title-description">
+			    	"Magic Leap is a computing platform with a whole new set of capabilities. Here are some of the experiences we’ve been exploring, but they are just a jumping-off point. This is where your imagination comes to play."
+			    </div>
+			</div>
+
+			<div class="col-sm-12 feature-section">
+				<div class="col-sm-6 feature-section-text">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
+						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 feature-section-image-container">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+			</div>
+
+			<div class="col-sm-12 feature-section">
+				<div class="col-sm-6 feature-section-image-container">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+				<div class="col-sm-6 feature-section-text">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
+						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 feature-section">
+				<div class="col-sm-6 feature-section-text">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
+						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 feature-section-image-container">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+			</div>
+
+			<div class="col-sm-12 feature-section">
+				<div class="col-sm-6 feature-section-image-container">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+				<div class="col-sm-6 feature-section-text">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
+						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 feature-section">
+				<div class="col-sm-6 feature-section-text">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
+						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 feature-section-image-container">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container-fluid form-section">
+		<div class="row">
+			<div class="col-sm-12" style="padding-top: 96px;
+    padding-bottom: 96px;">
+				<h1 style="color: rgb(248, 248, 248);font-size: 58px;
+    line-height: 64px;
+    font-weight: 700;">Shipping in 2018</h1>
+    <p style="color: rgb(248, 248, 248);font-size: 22px;
+    line-height: 30px;">Calling all designers, developers and creatives. Sign up and be the first to know<br> about partnerships, promotions and when Magic Leap One </p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" style="border-top: 1px solid #e8e8e8">
+	  <div class="col-sm-12 text-center" style="padding: 20px;">
+	    Made with <i class="fas fa-heart" style="color: rgb(241, 39, 66)"></i> in India
+	  </div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/scripts/js/libraries.min.js"></script>
+	<script src="deploy/jquery.parallax.js"></script>
+	<script>
+
+	// jQuery Selections
+	var $html = $('html'),
+			$container = $('#container'),
+			$prompt = $('#prompt'),
+			$toggle = $('#toggle'),
+			$about = $('#about'),
+			$scene = $('#scene');
+
+	// Hide browser menu.
+	(function() {
+		setTimeout(function(){window.scrollTo(0,0);},0);
+	})();
+
+	// Setup FastClick.
+	FastClick.attach(document.body);
+
+	// Add touch functionality.
+	if (Hammer.HAS_TOUCHEVENTS) {
+		$container.hammer({drag_lock_to_axis: true});
+		_.tap($html, 'a,button,[data-tap]');
+	}
+
+	// Add touch or mouse class to html element.
+	$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+	// Resize handler.
+	(resize = function() {
+		$scene[0].style.width = '100%';
+		$scene[0].style.height = window.innerHeight + 'px';
+		if (!$prompt.hasClass('hide')) {
+			if (window.innerWidth < 600) {
+				$toggle.addClass('hide');
+			} else {
+				$toggle.removeClass('hide');
+			}
+		}
+	})();
+
+	// Attach window listeners.
+	window.onresize = _.debounce(resize, 200);
+	window.onscroll = _.debounce(resize, 200);
+
+	function showDetails() {
+		$about.removeClass('hide');
+		$toggle.removeClass('i');
+	}
+
+	function hideDetails() {
+		$about.addClass('hide');
+		$toggle.addClass('i');
+	}
+
+	// Listen for toggle click event.
+	$toggle.on('click', function(event) {
+		$toggle.hasClass('i') ? showDetails() : hideDetails();
+	});
+
+	// Pretty simple huh?
+	$scene.parallax();
+
+	// Check for orientation support.
+	setTimeout(function() {
+		if ($scene.data('mode') === 'cursor') {
+			$prompt.removeClass('hide');
+			if (window.innerWidth < 600) $toggle.addClass('hide');
+			$prompt.on('click', function(event) {
+				$prompt.addClass('hide');
+				if (window.innerWidth < 600) {
+					setTimeout(function() {
+						$toggle.removeClass('hide');
+					},1200);
+				}
+			});
+		}
+	},1000);
+	</script>
+
+</body>
+</html>

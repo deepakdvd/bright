@@ -1,0 +1,32 @@
+{
+  "name": "brightmedia",
+  "version": "1.0.0",
+  "description": "360 bright media website",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "2.5.6",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "nodemailer": "3.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakdvd/bright.git"
+  },
+  "keywords": [
+    "AR",
+    "VR",
+    "Branding"
+  ],
+  "author": "Deepak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepakdvd/bright/issues"
+  },
+  "homepage": "https://github.com/deepakdvd/bright#readme"
+}
