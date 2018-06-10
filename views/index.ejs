@@ -252,6 +252,11 @@
 			color: rgb(248, 248, 248);
 			font-size: 22px;
     	line-height: 30px;
+    	max-width: 820px;
+    	text-align: center;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	position: absolute;
 		}
 
 		@media only screen and (max-width: 768px) {
@@ -312,6 +317,9 @@
 			.form-description {
 				font-size: 16px;
     		line-height: 24px;
+    		left: 0%;
+    		transform: translateX(0%);
+    		position: relative;
 			}
 		}
 	</style>
@@ -503,7 +511,7 @@
 
 	<div class="container-fluid form-section">
 		<div class="row">
-			<div class="col-lg-12" style="padding-top: 96px;
+			<div class="col-lg-12 text-center" style="padding-top: 96px;
     padding-bottom: 96px;">
 				<h1 class="form-title">Shipping in 2018</h1>
     		<p class="form-description">Calling all designers, developers and creatives. Sign up and be the first to know about partnerships, promotions and when Magic Leap One </p>
