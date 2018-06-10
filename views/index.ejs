@@ -19,6 +19,147 @@
 			font-family: 'Open Sans', sans-serif;
 		}
 
+		/*ANIMATION*/
+	  .slideanim {visibility:hidden;}
+	  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+	  }
+	  @keyframes slide {
+	    0% {
+	      opacity: 0;
+	      transform: translateY(70%);
+	    } 
+	    100% {
+	      opacity: 1;
+	      transform: translateY(0%);
+	    }
+	  }
+	  @-webkit-keyframes slide {
+	    0% {
+	      opacity: 0;
+	      -webkit-transform: translateY(70%);
+	    } 
+	    100% {
+	      opacity: 1;
+	      -webkit-transform: translateY(0%);
+	    }
+	  }
+
+	  .animated {
+		  -webkit-animation-duration: 1.5s;
+		  animation-duration: 1.5s;
+		  -webkit-animation-fill-mode: both;
+		  animation-fill-mode: both;
+		}
+
+	  @-webkit-keyframes bounceIn {
+		  from,
+		  20%,
+		  40%,
+		  60%,
+		  80%,
+		  to {
+		    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		  }
+
+		  0% {
+		    opacity: 0;
+		    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+		    transform: scale3d(0.3, 0.3, 0.3);
+		  }
+
+		  20% {
+		    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+		    transform: scale3d(1.1, 1.1, 1.1);
+		  }
+
+		  40% {
+		    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+		    transform: scale3d(0.9, 0.9, 0.9);
+		  }
+
+		  60% {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+		    transform: scale3d(1.03, 1.03, 1.03);
+		  }
+
+		  80% {
+		    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+		    transform: scale3d(0.97, 0.97, 0.97);
+		  }
+
+		  to {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1, 1, 1);
+		    transform: scale3d(1, 1, 1);
+		  }
+		}
+
+		@keyframes bounceIn {
+		  from,
+		  20%,
+		  40%,
+		  60%,
+		  80%,
+		  to {
+		    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		  }
+
+		  0% {
+		    opacity: 0;
+		    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+		    transform: scale3d(0.3, 0.3, 0.3);
+		  }
+
+		  20% {
+		    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+		    transform: scale3d(1.1, 1.1, 1.1);
+		  }
+
+		  40% {
+		    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+		    transform: scale3d(0.9, 0.9, 0.9);
+		  }
+
+		  60% {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+		    transform: scale3d(1.03, 1.03, 1.03);
+		  }
+
+		  80% {
+		    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+		    transform: scale3d(0.97, 0.97, 0.97);
+		  }
+
+		  to {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1, 1, 1);
+		    transform: scale3d(1, 1, 1);
+		  }
+		}
+
+		.bounceIn {
+		  -webkit-animation-duration: 1.5s;
+		  animation-duration: 1.5s;
+		  -webkit-animation-name: bounceIn;
+		  animation-name: bounceIn;
+		}
+
+		.overlay-for-mobile-scrolling {
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
 		.main-body {
 			margin-top: 100vh;
 		}
@@ -36,10 +177,6 @@
 			line-height: 26px;
 			padding: 16px 150px 48px 150px;
 			color: rgb(113, 113, 113);
-		}
-
-		.feature-section {
-			height: 550px;
 		}
 
 		.feature-section-text {
@@ -89,6 +226,93 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
+		}
+
+		.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: white !important;
+		}
+		.form-control::-moz-placeholder { /* Firefox 19+ */
+		  color: white !important;
+		}
+		.form-control:-ms-input-placeholder { /* IE 10+ */
+		  color: white !important;
+		}
+		.form-control:-moz-placeholder { /* Firefox 18- */
+		  color: white !important;
+		}
+
+		.form-title {
+			color: rgb(248, 248, 248);
+			font-size: 58px;
+    	line-height: 64px;
+    	font-weight: 700;
+		}
+
+		.form-description {
+			color: rgb(248, 248, 248);
+			font-size: 22px;
+    	line-height: 30px;
+		}
+
+		@media only screen and (max-width: 768px) {
+	    .body-title {
+  	    font-size: 28px;
+    		line-height: 36px;
+	    }
+
+	    .title-description {
+	    	font-size: 16px;
+    		line-height: 24px;
+    		padding: 16px 5px 48px 5px;
+	    }
+
+	    .feature-section {
+	    	padding-left: 0px;
+	    	padding-right: 0px;
+	    }
+
+	    .feature-section-text {
+				height: auto;
+			}
+
+			.feature-section-text-container {
+				top: 0;
+				transform: translateY(0%);
+				position: relative;
+				left: 0px;
+			}
+
+			.feature-section-text-title {
+		    font-size: 24px;
+    		line-height: 32px;
+    		text-align: center;
+			}
+
+			.feature-section-text-description {
+	    	font-size: 16px;
+    		line-height: 24px;
+    		text-align: center;
+			}
+
+			.feature-section-image-container {
+				height: auto;
+			}
+
+			.feature-section-image {
+				top: 0;
+				transform: translateY(0%);
+				position: relative;
+			}
+
+			.form-title {
+				font-size: 28px;
+    		line-height: 36px;
+			}
+
+			.form-description {
+				font-size: 16px;
+    		line-height: 24px;
+			}
 		}
 	</style>
 </head>
@@ -203,74 +427,74 @@
 		</footer> -->
 	</div>
 
-	<div class="overlay-for-scrolling" style="height: 100vh;position: absolute;top: 0;width: 100%"></div>
+	<div class="overlay-for-mobile-scrolling"></div>
 
 	<div class="container main-body">
 		<div class="row">
-			<div class="col-sm-12 bg-white">
+			<div class="col-lg-12 bg-white slideanim">
 					<h1 class="body-title">Built for Creators</h1>
 			    <div class="title-description">
 			    	"Magic Leap is a computing platform with a whole new set of capabilities. Here are some of the experiences we’ve been exploring, but they are just a jumping-off point. This is where your imagination comes to play."
 			    </div>
 			</div>
 
-			<div class="col-sm-12 feature-section">
-				<div class="col-sm-6 feature-section-text">
-					<div class="feature-section-text-container">
-						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
-						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
-					</div>
-				</div>
-				<div class="col-sm-6 feature-section-image-container">
+			<div class="col-lg-12 feature-section clearfix">
+				<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-push-6 feature-section-image-container animated">
 					<img class="feature-section-image" src="assets/images/click1.png" alt="">
 				</div>
-			</div>
-
-			<div class="col-sm-12 feature-section">
-				<div class="col-sm-6 feature-section-image-container">
-					<img class="feature-section-image" src="assets/images/click1.png" alt="">
-				</div>
-				<div class="col-sm-6 feature-section-text">
+				<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-pull-6 feature-section-text slideanim">
 					<div class="feature-section-text-container">
-						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
-						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+						<h3 class="feature-section-text-title" style="color: rgb(0, 213, 115);">Pull the Web Out of the Screen</h3>
+						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for content extraction and spatial browsing, enabling new ways to shop and explore with 3D objects.</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-sm-12 feature-section">
-				<div class="col-sm-6 feature-section-text">
-					<div class="feature-section-text-container">
-						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
-						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
-					</div>
-				</div>
-				<div class="col-sm-6 feature-section-image-container">
+			<div class="col-lg-12 feature-section clearfix">
+				<div class="col-lg-6 feature-section-image-container animated">
 					<img class="feature-section-image" src="assets/images/click1.png" alt="">
 				</div>
-			</div>
-
-			<div class="col-sm-12 feature-section">
-				<div class="col-sm-6 feature-section-image-container">
-					<img class="feature-section-image" src="assets/images/click1.png" alt="">
-				</div>
-				<div class="col-sm-6 feature-section-text">
+				<div class="col-lg-6 feature-section-text slideanim">
 					<div class="feature-section-text-container">
-						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
-						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+						<h3 class="feature-section-text-title" style="color: rgb(15, 145, 228);">Displays On Demand</h3>
+						<p class="feature-section-text-description">Open multiple screens anytime, anywhere, big or small. Deliver companion content for work or entertainment into any physical space. Walk with them or leave them hanging.</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-sm-12 feature-section">
-				<div class="col-sm-6 feature-section-text">
+			<div class="col-lg-12 feature-section clearfix">
+				<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-push-6 feature-section-image-container animated">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-pull-6 feature-section-text slideanim">
 					<div class="feature-section-text-container">
-						<h3 class="feature-section-text-title">Pull the Web Out of<br>the Screen</h3>
-						<p class="feature-section-text-description">Magic Leap One allows web developers to optimize for<br> content extraction and spatial browsing, enabling<br> new ways to shop and explore with 3D objects.</p>
+						<h3 class="feature-section-text-title" style="color: rgb(230, 113, 97);">Gaming, Unboxed</h3>
+						<p class="feature-section-text-description">Great games transport us to different worlds. But, what happens when games live in ours? Now, gameplay and characters finally come to you. Where will you take them?</p>
 					</div>
 				</div>
-				<div class="col-sm-6 feature-section-image-container">
+			</div>
+
+			<div class="col-lg-12 feature-section clearfix">
+				<div class="col-lg-6 feature-section-image-container animated">
 					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+				<div class="col-lg-6 feature-section-text slideanim">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title" style="color: rgb(0, 213, 115);">Be Present Anywhere</h3>
+						<p class="feature-section-text-description">Connect in physical space with others, digitally. It’s a new way to communicate and share experiences with friends and colleagues. Call it collaboration for another dimension.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12 feature-section clearfix">
+				<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-push-6 feature-section-image-container animated">
+					<img class="feature-section-image" src="assets/images/click1.png" alt="">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-pull-6 feature-section-text slideanim">
+					<div class="feature-section-text-container">
+						<h3 class="feature-section-text-title" style="color: rgb(15, 145, 228);">Bring Your Creativity to Life</h3>
+						<p class="feature-section-text-description">Experiment with combinations of creatures and objects to discover unexpected mash-ups. Like painting with turtles or rays of light. Imagine, produce, and play whenever, wherever, and however. It’s a sandbox without boundaries (or real sand).</p>
+					</div>
 				</div>
 			</div>
 
@@ -279,19 +503,42 @@
 
 	<div class="container-fluid form-section">
 		<div class="row">
-			<div class="col-sm-12" style="padding-top: 96px;
+			<div class="col-lg-12" style="padding-top: 96px;
     padding-bottom: 96px;">
-				<h1 style="color: rgb(248, 248, 248);font-size: 58px;
-    line-height: 64px;
-    font-weight: 700;">Shipping in 2018</h1>
-    <p style="color: rgb(248, 248, 248);font-size: 22px;
-    line-height: 30px;">Calling all designers, developers and creatives. Sign up and be the first to know<br> about partnerships, promotions and when Magic Leap One </p>
+				<h1 class="form-title">Shipping in 2018</h1>
+    		<p class="form-description">Calling all designers, developers and creatives. Sign up and be the first to know about partnerships, promotions and when Magic Leap One </p>
+			</div>
+
+			<div class="col-lg-12">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4">
+					<div class="col-lg-12">
+						<div class="form-group"> 
+					    <input type="text" style="background:transparent;color: white" class="form-control" id="" name="yrname" placeholder="Email Address" required>
+					  </div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group"> 
+					    <input type="text" style="background:transparent;color: white" class="form-control" id="" name="yrname" placeholder="What's your name?" required>
+					  </div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group"> 
+					    <input type="text" style="background:transparent;color: white" class="form-control" id="" name="yrname" placeholder="Tell us about yourself" required>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-4"></div>
+			</div>
+
+			<div class="col-lg-12">
+				<button class="btn btn-lg" id="gitou" style="background:  rgb(241, 39, 66);border-radius: 30px;margin-top: 30px;color: white">Get in Touch</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="container-fluid" style="border-top: 1px solid #e8e8e8">
-	  <div class="col-sm-12 text-center" style="padding: 20px;">
+	  <div class="col-lg-12 text-center" style="padding: 20px;">
 	    Made with <i class="fas fa-heart" style="color: rgb(241, 39, 66)"></i> in India
 	  </div>
 	</div>
@@ -376,6 +623,31 @@
 			});
 		}
 	},1000);
+
+
+	 $(document).ready(function(){
+	  $(window).scroll(function() {
+	    $(".slideanim").each(function(){
+	      var pos = $(this).offset().top;
+
+	      var winTop = $(window).scrollTop();
+	        if (pos < winTop + 600) {
+	          $(this).addClass("slide");
+	        }
+	    });
+	  });
+
+	  $(window).scroll(function() {
+	    $(".animated").each(function(){
+	      var pos = $(this).offset().top;
+
+	      var winTop = $(window).scrollTop();
+	        if (pos < winTop + 600) {
+						$(this).addClass("bounceIn");
+	        }
+	    });
+	  });
+	});
 	</script>
 
 </body>
