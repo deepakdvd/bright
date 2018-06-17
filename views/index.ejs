@@ -20,35 +20,6 @@
 		}
 
 		/*ANIMATION*/
-	  .slideanim {visibility:hidden;}
-	  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-	  }
-	  @keyframes slide {
-	    0% {
-	      opacity: 0;
-	      transform: translateY(70%);
-	    } 
-	    100% {
-	      opacity: 1;
-	      transform: translateY(0%);
-	    }
-	  }
-	  @-webkit-keyframes slide {
-	    0% {
-	      opacity: 0;
-	      -webkit-transform: translateY(70%);
-	    } 
-	    100% {
-	      opacity: 1;
-	      -webkit-transform: translateY(0%);
-	    }
-	  }
-
 	  .animated {
 		  -webkit-animation-duration: 1.5s;
 		  animation-duration: 1.5s;
@@ -322,9 +293,119 @@
     		position: relative;
 			}
 		}
+
+		.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 18%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(113, 113, 113);
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: rgb(113, 113, 113);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 25px;
+    top: -10px;
+    font-size: 45px;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: rgb(113, 113, 113);
+}
+
+.logo-name {
+	color: white;
+}
+
+#nav123 {
+	background: transparent;
+}
+
+.change-navbar-background-color {
+	background: white !important;
+	border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.change-navbar-font-color {
+	color: rgb(113, 113, 113) !important;
+}
+
+.effect-underline {
+	color: white;
+}
+
+.fa-caret-down {
+	visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .fa-caret-down {
+  	visibility: visible;
+  }
+}
+
 	</style>
 </head>
 <body>
+
+	<div class="example3" style="box-shadow: 5px 8.66px 30px 0 rgba(31,35,37,.078);">
+	  <nav class="navbar navbar-static-top navbar-fixed-top" id="nav123">
+	    <div class="container">
+	      <div class="navbar-header">
+	        <a class="navbar-brand" style="position: relative;left: 50%;transform: translateX(-50%);"  onclick="openNav()"><span class="logo-name">360 Bright Media <i class="fas fa-caret-down"></i></span>
+	        </a>
+	      </div>
+	      <div id="navbar3" class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav navbar-right">
+	          <li class="active "><a href="#" class="effect-underline">Home</a></li>
+	          <li><a href="" class="effect-underline">Services</a></li>
+	          <li><a href="" class="effect-underline">Portfolio</a></li>
+	          <li><a href="" class="effect-underline">About</a></li>
+	          <li><a href="" class="effect-underline">Contact Us</a></li>
+	        </ul>
+	      </div>
+	      </div>
+	  </nav>
+	</div>
+
+	<div id="myNav" class="overlay">
+	  <div class="overlay-content">
+	    <a href="#">Home</a>
+	    <a href="#">Services</a>
+	    <a href="#">Portfolio</a>
+	    <a href="#">About</a>
+	    <a href="#">Contact Us</a>
+	  </div>
+	  <i class="fas fa-times"  onclick="closeNav()" style="position: absolute;
+    left: 0px;
+    bottom: 48px;right: 0;font-size: 20px"></i>
+	</div>
+
 	<div id="container" class="wrapper">
 		<ul id="scene" class="scene unselectable"
 			data-friction-x="0.1"
@@ -555,6 +636,23 @@
 	<script src="assets/scripts/js/libraries.min.js"></script>
 	<script src="deploy/jquery.parallax.js"></script>
 	<script>
+    $(window).scroll(function(){
+		  if($(window).scrollTop() > 100){
+	      $("#nav123").addClass("change-navbar-background-color");
+	      $(".logo-name,.effect-underline").addClass("change-navbar-font-color");
+		  }
+		  else{
+		  	$("#nav123").removeClass("change-navbar-background-color");
+		  	$(".logo-name,.effect-underline").removeClass("change-navbar-font-color");
+		  }
+
+		  if($(window).scrollTop() > 100){
+		      $("#comp-name").fadeOut("500");
+		  }
+		  else{
+		    $("#comp-name").fadeIn("500");
+		  }
+		});
 
 	// jQuery Selections
 	var $html = $('html'),
@@ -570,7 +668,7 @@
 	})();
 
 	// Setup FastClick.
-	FastClick.attach(document.body);
+	// FastClick.attach(document.body);
 
 	// Add touch functionality.
 	if (Hammer.HAS_TOUCHEVENTS) {
@@ -632,19 +730,6 @@
 		}
 	},1000);
 
-
-	 $(document).ready(function(){
-	  $(window).scroll(function() {
-	    $(".slideanim").each(function(){
-	      var pos = $(this).offset().top;
-
-	      var winTop = $(window).scrollTop();
-	        if (pos < winTop + 600) {
-	          $(this).addClass("slide");
-	        }
-	    });
-	  });
-
 	  $(window).scroll(function() {
 	    $(".animated").each(function(){
 	      var pos = $(this).offset().top;
@@ -655,7 +740,14 @@
 	        }
 	    });
 	  });
-	});
+
+	  function openNav() {
+	    document.getElementById("myNav").style.height = "100%";
+		}
+
+		function closeNav() {
+    	document.getElementById("myNav").style.height = "0%";
+		}
 	</script>
 
 </body>
