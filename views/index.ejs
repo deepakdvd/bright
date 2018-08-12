@@ -541,7 +541,12 @@
 		</footer> -->
 	</div>
 
-	<div class="overlay-for-mobile-scrolling"></div>
+	<div class="overlay-for-mobile-scrolling">
+		<i class="fas fa-chevron-circle-down" style="color: white;
+    position: absolute;
+    bottom: 20px;
+    font-size: 35px;cursor: pointer;" id="arrow-down"></i>
+	</div>
 
 
 
@@ -829,6 +834,12 @@ Sonawala Road, Near Udyog bhavan, Goregaon East  Mumbai 400063.</p>
 		  else{
 		    $("#comp-name").fadeIn("500");
 		  }
+		});
+
+		$("#arrow-down").click(function() {
+	    $('html,body').animate({
+	        scrollTop: $(".main-body").offset().top},
+	        'slow');
 		});
 
 	// jQuery Selections
